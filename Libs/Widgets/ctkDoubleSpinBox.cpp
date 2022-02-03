@@ -400,7 +400,14 @@ double ctkDoubleSpinBoxPrivate
     {
 #if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
     QChar groupSeparator;
-    if ( q->locale().groupSeparator().size() == 1 )
+    if (  q->locale().groupSeparator().size() == 1 )
+        groupSeparator = q->locale().groupSeparator()[0];
+    else
+        assert( false );
+#else
+    QChar groupSeparator = q->locale().groupSeparator();
+#endif
+    if (groupSeparator.size() == 1 )
       {
         groupSeparator = q->locale().groupSeparator()[0];
       }
