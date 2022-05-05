@@ -402,8 +402,9 @@ double ctkDoubleSpinBoxPrivate
     QChar groupSeparator;
     if (  q->locale().groupSeparator().size() == 1 )
         groupSeparator = q->locale().groupSeparator()[0];
-    else
-        assert( false );
+      }
+    // else: group separator does not necessarily fit into a QChar (https://bugreports.qt.io/browse/QTBUG-69324) 
+    // but CTK only support group separators if they fit into a QChar
 #else
     QChar groupSeparator = q->locale().groupSeparator();
 #endif
