@@ -71,6 +71,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "ctkConsole_p.h"
 #include "ctkPimpl.h"
 
+//QT6 compatibility
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+#include <QRegularExpression>
+#define QRegExp QRegularExpression
+#endif
 //-----------------------------------------------------------------------------
 // ctkConsoleCompleter methods
 
