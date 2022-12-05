@@ -33,6 +33,12 @@
 #include "ctkWorkflowButtonBoxWidget.h"
 #include "ctkWorkflowGroupBox.h"
 
+#if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
+// #include <QRegularExpression>
+// #define QRegExp QRegularExpression
+#include <QRegExp>
+#endif
+
 // STD includes
 #include <iostream>
 
