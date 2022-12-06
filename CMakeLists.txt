@@ -21,6 +21,7 @@
 cmake_minimum_required(VERSION 3.0)
 
 foreach(p
+  CMP0091 # for qt 6, cmake 3.15
   CMP0054 # CMake 3.1
   CMP0020 # CMake 2.8.11
   )
