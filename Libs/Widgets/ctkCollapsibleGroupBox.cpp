@@ -111,7 +111,7 @@ ctkCollapsibleGroupBoxPrivate::ctkCollapsibleGroupBoxPrivate(
   this->ForcingVisibility = false;
   this->IsStateCreated = false;
   this->MaxHeight = 0;
-  this->CollapsedHeight = 14;
+  this->CollapsedHeight = 10;
 #if QT_VERSION >= 0x040600
   this->GroupBoxStyle = 0;
 #endif
